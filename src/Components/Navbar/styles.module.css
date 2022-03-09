@@ -1,3 +1,26 @@
 .nav {
-    border: 1px solid black;
+    height: 20px;
+    padding: 20px;
+    border-bottom: 2px solid rgb(116, 116, 255, 0.3);
+    display: flex;
+    background-image: url(https://img.freepik.com/free-photo/soft-cloudy-is-gradient-pastel-abstract-sky-background-sweet-color_6529-1434.jpg?w=740);
+    background-repeat: no-repeat;
+    background-size: 1366px 62px;
+}   
+
+div p {
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+div input {
+    margin-left: 30px;
+    height: 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+}
+
+div input::placeholder{
+    color: black;
 }

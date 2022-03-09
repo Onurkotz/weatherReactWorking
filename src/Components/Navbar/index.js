@@ -6,11 +6,8 @@ function Navbar() {
   return (
     <div className={styles.nav}>
 
-    <ul>
-      <li>
-        <a href> Anasayfa</a>
-      </li>
-    </ul>
+    <p>Şehrini Seç</p>
+    <input placeholder="Ara"/>
       
     </div>
   )
