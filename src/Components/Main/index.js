@@ -16,12 +16,9 @@ function Main() {
   return (
     
     <div className={styles.main}> 
+    
     <Card />
-   
-   <p>
-     {cities.name}, {cities.weather[0].description}
-   </p>
-
+    
     </div>
   )
 }
@@ -32,3 +29,5 @@ export default Main
 /// key 992c1f2ef9fa5dbd0f8cd57296cac07b
 
 //  https://api.openweathermap.org/data/2.5/weather?q=istanbul&appid=992c1f2ef9fa5dbd0f8cd57296cac07b
+
+//// <p>{cities.name}, </p>
