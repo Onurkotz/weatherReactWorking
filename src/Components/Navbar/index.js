@@ -1,15 +1,26 @@
 import styles from "./styles.module.css"
 import * as React from "react";
-
+import { Switch } from '@chakra-ui/react'
 
 function Navbar() {
   return (
+    
+   
     <div className={styles.nav}>
+    
+    <span className={styles.fl}>
+      <p>Şehrini Seç</p>
+      <input placeholder='Mesela "Ankara"' />
+      </span>
+ 
 
-    <p>Şehrini Seç</p>
-    <input placeholder="Ara"/>
-      
+    <span className={styles.fl}>
+      <p>Koyu Tema </p> 
+      <Switch colorScheme="red" id='email-alerts' />
+    </span>
+
     </div>
+    
   )
 }
 
