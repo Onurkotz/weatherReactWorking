@@ -15,7 +15,7 @@ function Navbar() {
  
 
     <span className={styles.fl}>
-      <p>Koyu Tema </p> 
+      <p style={{marginTop: "-3px"}} >Koyu Tema</p> 
       <Switch colorScheme="red" id='email-alerts' />
     </span>
 

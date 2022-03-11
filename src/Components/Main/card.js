@@ -12,7 +12,7 @@ function Card() {
 
         <div className={styles.city}>
           <h1>
-            Ankara
+            Van
           </h1>
         </div>
 

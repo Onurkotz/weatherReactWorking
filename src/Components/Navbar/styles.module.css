@@ -1,12 +1,11 @@
 .nav {
     height: 60px;
     padding: 20px;
-    border-bottom: 2px solid rgb(116, 116, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.295);
     display: flex;
     justify-content: space-between;
-    background-image: url(https://img.freepik.com/free-photo/soft-cloudy-is-gradient-pastel-abstract-sky-background-sweet-color_6529-1434.jpg?w=740);
-    background-repeat: no-repeat;
-    background-size: 1366px 62px;
+    background:none;
+    backdrop-filter: blur(30px);
 }   
 
 div p {
@@ -31,8 +30,6 @@ div input::placeholder{
 div input:focus{
     background-color: aqua;
 }
-
-
 
 .fl{
     display: inherit; 
