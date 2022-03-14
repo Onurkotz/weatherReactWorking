@@ -1,8 +1,26 @@
 import styles from "./styles.module.css"
-import * as React from "react";
+import {useEffect, useState} from "react";
 import { Switch } from '@chakra-ui/react'
+import { useFormik } from 'formik';
+
+
 
 function Navbar() {
+
+  const [searching, setSearching] = useState({
+    city: "",
+  } )
+  
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(searching);
+    
+  }
+ 
+  const onChangeInput = (e) => {
+    setSearching({...searching, [e.target.name]: e.target.value})
+  } 
+  
   return (
     
    
@@ -10,7 +28,10 @@ function Navbar() {
     
     <span className={styles.fl}>
       <p>Şehrini Seç</p>
-      <input placeholder='Mesela "Ankara"' />
+      <form onSubmit={onSubmit} >
+        <input type="text" name="city" placeholder='Mesela "Ankara"'  value={searching.city} 
+        onChange={onChangeInput} />
+      </form>
       </span>
  
 

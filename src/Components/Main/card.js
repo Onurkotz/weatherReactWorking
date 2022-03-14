@@ -19,7 +19,7 @@ function Card(props) {
 
         <div className={styles.heat}>
           <h1>
-            {props.temp}
+            {props.temp}°
           </h1>
         </div>
 

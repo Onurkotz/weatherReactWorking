@@ -1,15 +1,13 @@
 import React from "react";
-
-import Navbar from "./Components/Navbar"
-import Main from "./Components/Main"
+import Page from "./Components/Page/index"
 import './App.css';
+import { propNames } from "@chakra-ui/react";
 
 function App() {
   return (
     <div>
       
-      <Navbar />
-      <Main />
+      <Page />
 
     </div>
   );
