@@ -4,7 +4,7 @@ import styles from "./styles.module.css"
 
 import Card from "./card"
 
-function Main(  ) {
+function Main() {
   
 
   

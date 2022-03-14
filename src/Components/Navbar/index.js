@@ -7,9 +7,7 @@ import { useFormik } from 'formik';
 
 function Navbar() {
 
-  const [searching, setSearching] = useState({
-    city: "",
-  } )
+  const [searching, setSearching] = useState("")
   
   const onSubmit = (e) => {
     e.preventDefault();
@@ -17,10 +15,11 @@ function Navbar() {
     
   }
  
-  const onChangeInput = (e) => {
-    setSearching({...searching, [e.target.name]: e.target.value})
-  } 
-  
+ const changer = event => {
+   setSearching(event.target.value)
+  }
+
+console.log(searching)
   return (
     
    
@@ -30,7 +29,7 @@ function Navbar() {
       <p>Şehrini Seç</p>
       <form onSubmit={onSubmit} >
         <input type="text" name="city" placeholder='Mesela "Ankara"'  value={searching.city} 
-        onChange={onChangeInput} />
+        onChange={changer} />
       </form>
       </span>
  
