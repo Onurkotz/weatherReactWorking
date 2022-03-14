@@ -17,7 +17,15 @@ function Main() {
     
     <div className={styles.main}> 
     
-    <Card />
+      <h1 className={styles.head}>{cities.name}</h1>
+    
+      <Card day="Pazazrtesi" temp={Math.round(cities.main.temp)} desc={cities.weather[0].description} />
+      <Card day="Pazazrtesi" temp="25" desc="Bulutlu" />
+      <Card day="Pazazrtesi" temp="25" desc="Bulutlu" />
+      <Card day="Pazazrtesi" temp="25" desc="Bulutlu" />
+      <Card day="Pazazrtesi" temp="25" desc="Bulutlu" />
+
+    
     
     </div>
   )
