@@ -1,13 +1,17 @@
 import React from "react";
 import Page from "./Components/Page/index";
 import "./App.css";
-import { propNames } from "@chakra-ui/react";
+
+import {ThemeProvider} from "./myContext"
 
 function App() {
   return (
-    <div>
-      <Page />
-    </div>
+    <ThemeProvider>
+      
+    <Page  />
+    
+    </ThemeProvider>
+    
   );
 }
 
