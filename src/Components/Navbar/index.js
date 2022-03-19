@@ -1,47 +1,44 @@
-import styles from "./styles.module.css"
-import {useEffect, useState} from "react";
-import { Switch } from '@chakra-ui/react'
-import { useFormik } from 'formik';
+import styles from "./styles.module.css";
+import { useEffect, useState } from "react";
+import { Switch } from "@chakra-ui/react";
+import { useFormik } from "formik";
 
 
+function Navbar({addCity}) {
 
-function Navbar() {
+  const formik = useFormik({
+    initialValues: {
+      city: "",
+    },
 
-  const [searching, setSearching] = useState("")
-  
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log(searching);
-    
-  }
+    onSubmit: async (values) => {
  
- const changer = event => {
-   setSearching(event.target.value)
-  }
+      addCity({values})
 
-console.log(searching)
+    },
+  });
+
   return (
-    
-   
     <div className={styles.nav}>
-    
-    <span className={styles.fl}>
-      <p>Şehrini Seç</p>
-      <form onSubmit={onSubmit} >
-        <input type="text" name="city" placeholder='Mesela "Ankara"'  value={searching.city} 
-        onChange={changer} />
-      </form>
+      <span className={styles.fl}>
+        <p>Şehrini Seç</p>
+        <form onSubmit={formik.handleSubmit}>
+          <input
+            type="text"
+            name="city"
+            placeholder='Mesela "Ankara"'
+            value={formik.values.city}
+            onChange={formik.handleChange}
+          />
+        </form>
       </span>
- 
 
-    <span className={styles.fl}>
-      <p style={{marginTop: "-3px"}} >Koyu Tema</p> 
-      <Switch colorScheme="red" id='email-alerts' />
-    </span>
-
+      <span className={styles.fl}>
+        <p style={{ marginTop: "-3px" }}>Koyu Tema</p>
+        <Switch colorScheme="red" id="email-alerts" />
+      </span>
     </div>
-    
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
