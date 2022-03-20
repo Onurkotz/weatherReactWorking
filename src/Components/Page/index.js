@@ -5,12 +5,16 @@ import Main from "../Main/index";
 //import Styles from "../../style.css"
 
 function Page() {
-  
+  const [province, setProvince] = useState([
+    {
+      city: "",
+    },
+  ]);
 
   return (
-    <div style={{ backgroundColor: "red" }}>
-      <Navbar  />
-      <Main  />
+    <div>
+      <Navbar city={province} addCity={setProvince} />
+      <Main city={province} />
     </div>
   );
 }
