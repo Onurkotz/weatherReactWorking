@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./styles.module.css";
-import { useQuery } from "react-query";
+//import { useQuery } from "react-query";
 
 
 
@@ -10,16 +10,32 @@ import { useQuery } from "react-query";
 
 import Card from "./card";
 
-function Main({cityInner}) {
- 
+function Main() {
 
+  const [citem, setCitem] = useState([])
+ 
+  useEffect(() => {
+    
+    axios.get('https://api.collectapi.com/weather/getWeather', {
+        params: {
+            'data.lang': 'tr',
+            'data.city': "istanbul",
+        },
+        headers: {
+            'authorization': 'apikey 350nXCr84vVRp6Davo8z8T:2sPJhdyElZSWpA80zEw6Kr',
+            'content-type': 'application/json',
+        }
+    })
+        .then((data) => setCitem(data.data))
+           
+  }, []);
   
 
-  console.log(cityInner)
+  
   
   return (
     <div  style={{backgroundColor: "red"}}>
-      <h1 className={styles.head}>  </h1>
+      <h1 className={styles.head}> {citem.city} </h1>
 
       <Card day="fgag" temp="5" desc="km" />
       <Card day="Pazazrtesi" temp="25" desc="Bulutlu" />
